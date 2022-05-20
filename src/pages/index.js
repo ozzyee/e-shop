@@ -10,29 +10,29 @@ const images = [
    "cesar-la-rosa-HbAddptme1Q-unsplash.jpg",
    "tamara-bellis-68csPWTnafo-unsplash.jpg",
 ];
+
 export async function getServerSideProps(context) {
-   const res = await fetch("https://fakestoreapi.com/products");
-   const data = await res.json();
-   return { props: { data: data } };
+	const res = await fetch("https://fakestoreapi.com/products");
+	const data = await res.json();
+	return { props: { data: data } };
 }
 
 export default function Home({ data }) {
-   function getTopSellers() {
-      // const randomOne = data[Math.floor(Math.random() * 20)]
-      // const randomTwo = data[Math.floor(Math.random() * 20)]
-      // if (randomOne === randomTwo) {
-      //    randomTwo = Math.floor(Math.random() * 20)
-      // }
-      // const randomThree =
-   }
+	const price1 = data[15].price;
+	const image1 = data[15].image;
+	const price2 = data[17].price;
+	const image2 = data[17].image;
+	const price3 = data[6].price;
+	const image3 = data[6].image;
 
-   return (
-      <div>
-         <Carousel data={fakeData} />;
-         <PhotoCard
-            price={data[Math.floor(Math.random() * 20)].price}
-            image={data[Math.floor(Math.random() * 20)].image}
-         />
-      </div>
-   );
+	return (
+		<div>
+			<Carousel data={fakeData} />
+			<div className={styles.best}>
+				<PhotoCard price={price1} image={image1} />
+				<PhotoCard price={price2} image={image2} />
+				<PhotoCard price={price3} image={image3} />
+			</div>
+		</div>
+	);
 }

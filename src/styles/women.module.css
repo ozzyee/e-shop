@@ -1,0 +1,12 @@
+.women {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.product {
+	margin: 20px;
+	width: 450px;
+	padding: 25px;
+}
