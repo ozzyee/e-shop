@@ -1,15 +1,18 @@
 .footer {
-  background-color: #d9d7f1;
-  width: 100vw;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   background-color: #d9d7f1;
+   width: 100vw;
+   height: 10vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   position: absolute;
+   bottom: 0;
 }
 
 .icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 40%;
 }
