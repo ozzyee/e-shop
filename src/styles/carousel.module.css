@@ -1,0 +1,12 @@
+.wrapper {
+   height: 450px;
+}
+
+.wrapper img {
+   width: 100vw;
+   color: #fff;
+   line-height: 400px;
+   text-align: center;
+   background: #364d79;
+   object-fit: cover;
+}
