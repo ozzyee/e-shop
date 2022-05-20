@@ -10,14 +10,29 @@ const fakeData = [
    "cesar-la-rosa-HbAddptme1Q-unsplash.jpg",
    "tamara-bellis-68csPWTnafo-unsplash.jpg",
 ];
-export async function ()
+export async function getServerSideProps (context) {
+   const res = await fetch ("https://fakestoreapi.com/products")
+   const data = await res.json()
+   return {props: {data:data}}
+}
 
 
 
-export default function Home() {
+export default function Home({data}) {
+   
+function getTopSellers() {
+   // const randomOne = data[Math.floor(Math.random() * 20)]
+   // const randomTwo = data[Math.floor(Math.random() * 20)]
+   // if (randomOne === randomTwo) {
+   //    randomTwo = Math.floor(Math.random() * 20)  
+   // } 
+   // const randomThree = 
+}
+
+
    return (
    <div>
    <Carousel data={fakeData} />;
-   <PhotoCard />
+   <PhotoCard price={data[Math.floor(Math.random() * 20)].price} image={data[Math.floor(Math.random() * 20)].image} />
    </div>
    )}
